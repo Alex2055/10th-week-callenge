@@ -19,7 +19,9 @@ header {
 }
 
 #theCard {
-    height: 250px;
+   
+    min-height: 250px;
+    height: fit-content;
     width: 200px;
     background-color: whitesmoke;
 }
@@ -28,17 +30,29 @@ header {
     background-color: rgb(60, 79, 131);
 }
 
+#titlesblock{
+    width: 100%;
+}
+
 #topTitle {
     color: white;
     padding: 5px;
+    height: 10px;
+    margin: 10px;
+    font-size: 15pt;
 }
 #bottomTitle{
     color: white;
     padding: 5px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 25%;
+   
 }
 
 #cardBody {
     margin: 10%;
+   
 }
 
 #idBox {
@@ -54,6 +68,7 @@ header {
 }
 
 .info-line{
+   
     width: 100%; 
     margin: 1px;
      border: solid rgb(167, 167, 167) 1px;
@@ -62,4 +77,5 @@ header {
      background-color: white; 
      min-height: 35px; 
      padding-left: 5px;
+     overflow-wrap: break-word;
 }

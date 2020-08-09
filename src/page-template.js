@@ -20,10 +20,10 @@ const createCards = (htmldata, teamarrey) => {
     for (let i = 0; i < teamarrey.length; i++) {
         htmldata.push(`<div id="theCard" class="card mb-6 mr-5">
             <header id="cardTop" class="card-header">
-                <div>
-                    <h2 id="topTitle" class="card-header-title">${teamarrey[i].getRole()}</h2>
-                    <h3 id="bottomTitle" class="card-header-title">${teamarrey[i].getName()}</h3>
-                </div>
+            <div id="titlesBlock">
+                    <h2 id="topTitle" class="card-header-title">${teamarrey[i].getName()}</h2>
+                    <h4 id="bottomTitle" class="card-header-title">${teamarrey[i].getRole()}</h4>
+                    </div>
             </header>
             <div id="cardBody" class="card-body">
 
@@ -31,10 +31,10 @@ const createCards = (htmldata, teamarrey) => {
                     ID: ${teamarrey[i].getId()}
                 </div>
                 <div class="info-line">
-                    Email: ${teamarrey[i].getEmail()}
+                    Email: <a href="mailto:${teamarrey[i].getEmail()}">${teamarrey[i].email}</a>
                 </div>
-                <div class="info-line">
-                    ${teamarrey[i].getOptional()}
+                <div class="info-line"> 
+                ${teamarrey[i].getOptional()}
                 </div>
 
             </div>

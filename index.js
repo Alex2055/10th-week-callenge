@@ -1,10 +1,10 @@
 const createCards = require('./src/page-template');
 const inquirer = require('inquirer');
-const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 const fs = require('fs');
+const { ENETRESET } = require('constants');
 let teamarrey = [];
 let htmldata = [];
 
@@ -18,7 +18,17 @@ const promptManager = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'What is his ID?'
+            message: 'What is his ID?',
+            validate: numberId => {
+
+                if (!Number(numberId) === false) {
+                    return true;
+                }
+                else {
+                    console.log('--> The Id must be the number');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -56,7 +66,17 @@ const promptTeam = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'What is his ID?'
+            message: 'What is his ID?',
+            validate: numberId => {
+
+                if (!Number(numberId) === false) {
+                    return true;
+                }
+                else {
+                    console.log('--> The Id must be the number');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -106,9 +126,9 @@ const promptTeam = () => {
         if (Data.addmore) {
             promptTeam();
         }
-else{
-        return createCards(htmldata, teamarrey), writeFile() ;
-}
+        else {
+            return createCards(htmldata, teamarrey), writeFile();
+        }
     })
 
 
@@ -128,7 +148,7 @@ const writeFile = () => {
 promptManager()
     .then(promptTeam)
     .then()
-    
+
 
 
 
