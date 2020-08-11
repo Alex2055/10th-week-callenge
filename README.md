@@ -6,6 +6,7 @@
 4. [ Buiilt with.](#contr)
 5. [ Tests.](#test)
 6. [ Questions.](#ques)
+7. [ Screenshot.](#scrsh)
 <a name="desc"></a>
 ## Description:
 ### Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
@@ -28,4 +29,7 @@
 ## https://github.com/Alex2055
 ### Email me:
 ## alexfromnashville@gmail.com
-    
+ 
+ <a name="scrsh"></a>
+ #
+ ![web page screenshot](src/team.png)
